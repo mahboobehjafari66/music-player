@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Knewave&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #131312;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+header .menu-slide {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  background-color: #111727;
+  box-shadow: 5px 0px 2px #090f1f;
+  color: #fff;
+}
+
+header .song-slide {
+  width: 50%;
+  background: #0b1320;
+}
+
+header .menu-slide h1 {
+  font-size: 20px;
+  margin: 15px 0px 0px 20px;
+  font-weight: 500;
+}
+header .menu-slide .playlist {
+  margin: 40px 0px 0px 20px;
+}
+header .menu-slide .playlist h4 {
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  color: #4c5262;
+  transition: 0.3s linear;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+header .menu-slide .playlist h4:hover {
+  color: #fff;
+}
+header .menu-slide .playlist h4 span {
+  position: relative;
+  margin-right: 35px;
+}
+header .menu-slide .playlist h4 span::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border: 4px solid #4c5262;
+  border-radius: 50%;
+  top: -4px;
+  transition: 0.3s linear;
+}
+header .menu-slide .playlist h4:hover span::before {
+  border: 4px solid #fff;
+}
+header .menu-slide .playlist h4 .bi {
+  display: none;
+}
+header .menu-slide .playlist .active {
+  color: #36e2ec;
+}
+header .menu-slide .playlist .active span {
+  display: none;
+}
+header .menu-slide .playlist .active .bi {
+  display: flex;
+  margin-right: 20px;
+}
+header .menu-slide .menu-song {
+  width: 100%;
+  height: 300px;
+
+  margin-top: 40px;
+}
+header .menu-slide .menu-song li {
+  list-style-type: none;
+  padding: 5px 0px 0px 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+header .menu-slide .menu-song li:hover {
+  background: rgb(105, 105, 170, 0.1);
+}
+header .menu-slide .menu-song li span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4c5262;
+}
+header .menu-slide .menu-song li img {
+  width: 32px;
+  height: 32px;
+  margin-left: 25px;
+}
+header .menu-slide .menu-song li h5 {
+  font-size: 11px;
+  margin-left: 15px;
+}
+header .menu-slide .menu-song li .subtittle {
+  font-size: 9px;
+  color: #4c5262;
+}
+header .menu-slide .menu-song li .bi {
+  position: absolute;
+  right: 15px;
+  top: 6px;
+  font-size: 16px;
+}
+header .song-slide {
+  z-index: 2;
+}
+
+header .song-slide nav {
+  width: 90%;
+  height: 10%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .song-slide nav ul {
+  display: flex;
+}
+header .song-slide nav ul li {
+  position: relative;
+  list-style-type: none;
+  font-size: 13px;
+  color: #4c5262;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+header .song-slide nav ul li:hover {
+  color: #fff;
+}
+header .song-slide nav ul li:nth-child(1) {
+  color: #fff;
+}
+header .song-slide nav ul li span {
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background: #36e2ec;
+  bottom: -5px;
+  left: 0px;
+  border-radius: 20%;
+}
+header .song-slide nav .search {
+  position: relative;
+  width: 40%;
+  padding: 1px 10px;
+  border-radius: 20px;
+  color: gray;
+}
+header .song-slide nav .search::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgb(184, 184, 184, 0.1);
+  backdrop-filter: drop(5px);
+  z-index: -1;
+}
+header .song-slide nav .search .bi {
+  font-size: 13px;
+  padding: 3px 0px 0px 10px;
+}
+header .song-slide nav .search input {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0px 10px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.wrapper {
+  display: flex;
+  margin-top: 5%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.wrapper i {
+  top: 55%;
+  height: 30px;
+  width: 30px;
+  color: #343f4f;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+.wrapper i:first-child {
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child {
+  right: -22px;
+}
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img {
+  pointer-events: none;
+}
+.carousel img {
+  height: 250px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child {
+  margin-left: 0px;
+}
+
+.header-stats {
+  display: flex;
+  margin-top: 10%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgba(110, 110, 133, 0.1);
+}
+.header-stats-card {
+  min-width: 150px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: #36e2ec;
+  border-radius: 1rem;
+}
+.header-stats-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.music-playae-container {
+  width: 25%;
+  height: 100%;
+  background-color: #111727;
+}
+.player {
+  background: #111727;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+.cover img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.info {
+  margin: 15px 0;
+}
+
+.controls button {
+  margin: 5px;
+}
+
+.recommended-songs {
+  margin-top: 20px;
+}
+
+.recommended-songs ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 10px;
+}
+
+.recommended-songs li {
+  margin: 5px 0;
+}
